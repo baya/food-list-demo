@@ -10,12 +10,12 @@
       <a class="navbar-brand" href="#"><%= t('site.daily_meals') %></a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
-      <form class="navbar-form navbar-right">
+      <%= form_tag '/set_language',  class: "navbar-form navbar-right", id: 'set-language-form' do %>
         <div class="form-group">
 	  <label><%= t('site.select_a_language')%></label>
-	  <%= select_tag '', options_for_select(['zh-CN', 'en'], I18n.locale.to_s), class: 'form-control'%>
+	  <%= select_tag 'language', options_for_select(['zh-CN', 'en'], I18n.locale.to_s), class: 'form-control', id: 'select-language'%>
         </div>
-      </form>
+      <% end %>
     </div><!--/.nav-collapse -->
   </div>
 </nav>
