@@ -8,7 +8,7 @@ class SessionController < ApplicationController
     if user
       self.current_user = user
       flash[:notice] = I18n.t('site.login_successful')
-      redirect_to '/'
+      redirect_to '/food_plan'
     else
       flash[:notice] = I18n.t('site.login_failed')
       render action: 'new'

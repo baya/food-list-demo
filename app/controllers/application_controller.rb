@@ -10,6 +10,13 @@ class ApplicationController < ActionController::Base
 
   private
 
+  def login_required
+    if current_user.nil?
+      session[:return_to] = request.original_url
+      redirect_to login_path
+    end
+  end
+
   def current_user
     @current_user ||= User.find_by_id(session[:user_id])
   end
