@@ -9,5 +9,6 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'unicorn'
 gem 'capistrano-rails', group: :development
-
-
+gem 'redis'
+gem 'hiredis'
+gem 'cached_key_value_store'
