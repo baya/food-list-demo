@@ -1,5 +1,27 @@
 ---
 zh-CN:
+  food:
+    eggplant: '茄子'
+    kidney_bean: '四季豆'
+    chili: '辣椒'
+    white_gourd: '冬瓜'
+    cucumber: '黄瓜'
+    broad_bean: '蚕豆'
+    carrot: '红萝卜'
+    spinage: '菠菜'
+    bamboo_shoot: '竹笋'
+    volvaria: '草菇'
+    agaric: '木耳'
+    kelp: '海带'
+    chicken: '鸡肉'
+    goose_liver: '鹅肝'
+    grass_carp: '草鱼'
+    carp: '鲤鱼'
+    towel_gourd: '丝瓜'
+    pakchoi: '小白菜'
+    leek: '韭菜'
+    celtuce: '莴笋'
+    beef: '牛肉'
   site:
     daily_meals: '一日三餐'
     please_sign_in: '请登录'
@@ -10,6 +32,10 @@ zh-CN:
     login_failed: '登陆失败'
     logout_successfully: '成功退出'
     logout: '退出'
+    breakfast: '早餐'
+    lanch: '午餐'
+    dinner: '晚餐'
+    food_plan: '食物计划'
   activerecord:
     errors:
       messages:

@@ -20,4 +20,5 @@ require 'redis/connection/hiredis'
 # end
 
 $i18n_redis = Redis.new(YAML.load_file("#{Rails.root}/config/redis.yml")['i18n'])
-I18n.backend = I18n::Backend::CachedKeyValueStore.new($i18n_redis)
+# I18n.backend = I18n::Backend::CachedKeyValueStore.new($i18n_redis)
+I18n.backend = I18n::Backend::Chain.new(I18n::Backend::KeyValue.new($i18n_redis), I18n.backend)

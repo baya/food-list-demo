@@ -1,1 +1,46 @@
-<h2>食物计划</h2>
+<div class='table-responsive'>
+<h3><%= t('site.food_plan')%></h3>
+  <table class="table table-hover food-plan-table">
+    <thead>
+      <tr>
+	<td></td>
+	<%- day_names = t('date.day_names') %>
+	<% day_names.each do |day_name| %>
+	<td><%= day_name %></td>
+	<% end %>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+	<td><%= t('site.breakfast') %></td>
+	<td><%= t('food.eggplant') %></td>
+	<td><%= t('food.kidney_bean') %></td>
+	<td><%= t('food.chili') %></td>
+	<td><%= t('food.white_gourd')%></td>
+	<td><%= t('food.cucumber')%></td>
+	<td><%= t('food.broad_bean')%></td>
+	<td><%= t('food.carrot')%></td>
+      </tr>
+      <tr>
+	<td><%= t('site.lanch') %></td>
+	<td><%= t('food.spinage')%></td>
+	<td><%= t('food.bamboo_shoot')%></td>
+	<td><%= t('food.volvaria')%></td>
+	<td><%= t('food.agaric')%></td>
+	<td><%= t('food.kelp')%></td>
+	<td><%= t('food.chicken')%></td>
+	<td><%= t('food.goose_liver')%></td>
+      </tr>
+      <tr>
+	<td><%= t('site.dinner') %></td>
+	<td><%= t('food.grass_carp')%></td>
+	<td><%= t('food.carp')%></td>
+	<td><%= t('food.towel_gourd')%></td>
+	<td><%= t('food.pakchoi')%></td>
+	<td><%= t('food.leek')%></td>
+	<td><%= t('food.celtuce')%></td>
+	<td><%= t('food.beef')%></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
