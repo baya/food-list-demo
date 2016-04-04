@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   get '/login', to: 'session#new'
   post '/login', to: 'session#create'
-  delete '/logout', to: 'session#destroy'
+  delete '/logout', to: 'session#destroy', as: 'logout'
   post '/set_language', to: 'session#set_language'
 
   root to: 'session#new'

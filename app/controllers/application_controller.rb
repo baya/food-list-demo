@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
 
   before_filter :set_current_lang
 
+  helper_method :current_user
+
 
   private
 

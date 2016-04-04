@@ -4,9 +4,21 @@ class SessionController < ApplicationController
   end
 
   def create
+    user = User.find_by(login: params[:login])
+    if user
+      self.current_user = user
+      flash[:notice] = I18n.t('site.login_successful')
+      redirect_to '/'
+    else
+      flash[:notice] = I18n.t('site.login_failed')
+      render action: 'new'
+    end
   end
 
   def destroy
+    session[:user_id] = nil
+    flash[:notice] = I18n.t('site.logout_successfully')
+    redirect_to '/'
   end
 
   def set_language

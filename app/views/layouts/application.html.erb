@@ -9,6 +9,11 @@
 <body>
   <%= render 'layouts/nav' %>
   <div class='container'>
+    <% if flash[:notice] %>
+      <div class='alert alert-info fade in'>
+	<%= flash[:notice] %>
+      </div>
+    <% end %>
     <%= yield %>
   </div>
 </body>

@@ -6,6 +6,10 @@ en:
     select_a_user: 'select a user'
     sign_in: 'sign in'
     select_a_language: 'select a language'
+    login_successful: 'login successful'
+    login_failed: 'login failed'
+    logout_successfully: 'logout successfully'
+    logout: 'logout'
   activerecord:
     errors:
       messages:

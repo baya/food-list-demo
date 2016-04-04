@@ -6,6 +6,10 @@ zh-CN:
     select_a_user: '选择一个用户'
     sign_in: '登录'
     select_a_language: '选择语言'
+    login_successful: '登录成功'
+    login_failed: '登陆失败'
+    logout_successfully: '成功退出'
+    logout: '退出'
   activerecord:
     errors:
       messages:
