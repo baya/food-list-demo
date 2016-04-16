@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   post '/set_language', to: 'session#set_language'
   get '/food_plan', to: 'food_plan#index'
 
-  get '/translation/:key', to: "translation#edit", as:  :translation
-  post '/translation/:key', to: "translation#update", as: :save_translation
+  get '/translation', to: "translation#edit", as:  :translation
+  post '/translation', to: "translation#update", as: :save_translation
 
 
   root to: 'session#new'

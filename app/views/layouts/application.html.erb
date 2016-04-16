@@ -4,6 +4,8 @@
   <title>FoodListDemo</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application', media: 'all' %>
+  <%= stylesheet_link_tag    '/fancybox/source/jquery.fancybox.css', media: 'all' %>
+  <%= javascript_include_tag '/fancybox/source/jquery.fancybox.pack.js', media: 'all' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -23,5 +25,6 @@
   $(document).ready(function(){
      DailyMealSite.initSelectLanguage();
      DailyMealSite.initTransQtip();
+     DailyMealSite.initPopupTrForm();
   })
 </script>

@@ -33,3 +33,22 @@ DailyMealSite.initTransQtip = function(){
 	})
     })
 }
+
+DailyMealSite.initPopupTrForm = function(){
+    $(document).on('click', '.trans-edit-fancy', function(){
+	$.fancybox.showLoading();
+	$('div.qtip:visible').qtip('hide');
+	$.fancybox({
+	    type: "ajax",
+	    href: "/translation?key=" + $(this).attr("data-key"),
+	    width   : 500,
+	    autoSize: false,
+	    height    : 500,
+	    success: function() {
+		$.fancybox.hideLoading();
+		
+	    }
+	}); 
+	return false;
+    })
+}

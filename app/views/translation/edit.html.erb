@@ -1,0 +1,23 @@
+<%= form_tag save_translation_path(key: @key), :id => "translation_form" do %>
+  <h2>Key: <%= @key %></h2>
+  <table>
+    <thead>
+      <tr>
+	<th><%= t('locale')%></th>
+	<th><%= t('content')%></th>	
+      </tr>
+    </thead>
+    <tbody>
+      <%- @locales.each do |l| %>
+	<tr>
+	  <td><%= l %></td>
+	  <td><%= text_field_tag "trans_content[#{l}]", I18n.t(@key, locale: l, default: '').to_json, style: 'width:300px;' %></td>
+	</tr>
+      <% end %>
+      <tr>
+	<td><%= submit_tag "save", id: "save_translation"%></td>
+      </tr>
+    </tbody>
+  </table>
+  
+<% end %>
