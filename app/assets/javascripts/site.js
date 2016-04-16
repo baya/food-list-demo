@@ -7,3 +7,29 @@ DailyMealSite.initSelectLanguage = function(){
 	$form.submit();
     })
 }
+
+DailyMealSite.initTransQtip = function(){
+    $('.trans-edit').each(function(){
+	$(this).qtip({
+	    content: {
+		text: '<a class="trans-edit-fancy" data-key='+this.id+'>Edit translation!</a>',
+		title: { text: 'Translation', button: true}
+	    },
+	    hide: 'unfocus',
+	    show: {solo: true},
+	    style: { border: { width: 5, radius: 10 },
+		     padding: 10, 
+		     textAlign: 'center',
+		     tip: true, // Give it a speech bubble tip with automatic corner detection
+		     name: 'cream' // Style it according to the preset 'cream' style
+		   },
+	    events: {
+		show: function(event, api) {
+		    
+		}
+
+	    }
+
+	})
+    })
+}
