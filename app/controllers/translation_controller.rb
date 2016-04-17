@@ -11,8 +11,10 @@ class TranslationController < ApplicationController
   def update
     key = params[:key]
     params[:trans_content].each {|locale, value|
-        data = {key => ActiveSupport::JSON.decode(value)}
+      data = {key => ActiveSupport::JSON.decode(value)}
+      if data[key].present?
         I18n.backend.store_translations(locale, data, escape: false)
+      end
     }
     refer = request.env["HTTP_REFERER"]
     redirect_to refer
